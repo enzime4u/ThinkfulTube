@@ -1,0 +1,32 @@
+body {
+	margin: 0;
+	padding: 0;
+	font-size: 0.65em;
+}
+
+h1 {
+	font-family: sans-serif;
+	font-size: 4em;
+	text-align: center;
+	color: red;
+	text-shadow: 0.1em 0.1em 0.1em #999;
+	margin-top: 2em;
+}
+
+form {
+	margin: 2em auto;
+	text-align: center;
+}
+.inp_btn {
+	background-color: blue;
+    width: 8em;
+    padding: 0.5em;
+    color: #fff;
+	border-radius: 0.4em;
+	cursor: pointer;
+	box-decoration: none;
+	box-shadow: 0 0.1em 0.1em #999;	
+}
+
+
+
