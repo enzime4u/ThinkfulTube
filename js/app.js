@@ -6,7 +6,6 @@ $(document).ready(function() {
 		getRequest();
 		console.log($('#query').val());	
 	})
-
 });
 
 	function getRequest(searchTerm) {
@@ -18,14 +17,15 @@ $(document).ready(function() {
 		};
 		url = 'https://www.googleapis.com/youtube/v3/search';
 		$.getJSON(url, params, function(data){
-			showResults(data.Search);
+			console.log(data);
+			showResults(data.item);
 		});
 	}
 
 	function showResults(results) {
-		var html = " ";
+		var html = "";
 		$.each(results, function(index, value) {
-			html += '<p>' + value.Title + '</p>';
+			html += '<p>' + value.item + '</p>';
 		});
 		$('#search-results').html(html);
 	}
