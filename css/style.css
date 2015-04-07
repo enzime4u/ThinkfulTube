@@ -18,7 +18,7 @@ form {
 	text-align: center;
 }
 .inp_btn {
-	background-color: blue;
+	background-color: darkred;
     width: 8em;
     padding: 0.5em;
     color: #fff;
@@ -35,6 +35,11 @@ p{
 
 li {
 	display: inline-block;
+	margin-right: 2em;
+	margin-top: 1.5em;
+}
+li:last-child {
+	margin-right: 0;
 }
 
 
