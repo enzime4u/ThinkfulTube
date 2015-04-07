@@ -4,7 +4,7 @@ $(document).ready(function() {
 		var searchTerm = $('#query').val();
 		/* get request function */
 		getRequest();
-		console.log($('#query').val());	
+		console.log(searchTerm);	
 	})
 });
 
@@ -18,14 +18,14 @@ $(document).ready(function() {
 		url = 'https://www.googleapis.com/youtube/v3/search';
 		$.getJSON(url, params, function(data){
 			console.log(data);
-			showResults(data.item);
+			showResults(data.items);
 		});
 	}
 
 	function showResults(results) {
 		var html = "";
 		$.each(results, function(index, value) {
-			html += '<p>' + value.item + '</p>';
+			html += '<p>' + value.etag + '</p>';
 		});
 		$('#search-results').html(html);
 	}
