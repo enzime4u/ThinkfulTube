@@ -24,9 +24,11 @@ $(document).ready(function() {
 
 	function showResults(results) {
 		var html = "";
-		$.each(results, function(index, value) {
-			html += '<p>' + value.etag + '</p>';
-		});
+		$.each(results, function(index, items) {
+			html += '<li><iframe src="https://www.youtube.com/embed/"' + items.id.videoId + '</iframe></li>';
+
+		console.log(items.id.videoId);
+    }); 
 		$('#search-results').html(html);
 	}
 
